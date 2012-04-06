@@ -1,6 +1,7 @@
 <?php
 /**
 Plugin Name: bbboing
+Depends: oik
 Plugin URI: http://www.oik-plugins.com/bbboing
 Description: obfuscate text but leave it readable
 Version: 1.0

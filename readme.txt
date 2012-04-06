@@ -48,6 +48,10 @@ Please use bbboing for your own amusement.
 1. Activate the bbboing plugin through the 'Plugins' menu in WordPress
 1. Whenever you want to produce some 'bbboing'ed text use the [bbboing] shortcode.
 
+Note: bbboing is dependent upon the oik plugin. You can activate it but it will not work unless oik is also activated.
+Download oik from 
+[oik download](http://wordpress.org/extend/plugins/oik/0
+
 == Frequently Asked Questions ==
 = Where does bbboing come from? =
 bbboing is an anagram of bobbing, which is part of my company name ( bobbing wide - hence my WordPress.org username ). 
@@ -71,8 +75,12 @@ The bobbing plugin that comes with bbboing is dependent upon oik and bbboing.
 = Can you tell me more about the research? =
 See http://www.mrc-cbu.cam.ac.uk/people/matt.davis/Cmabrigde/
 
+= What is the bobbing plugin? =
+This is a sample plugin that is dependent upon oik and bbboing.
+
+
 == Screenshots ==
-1. 
+1. Example of [bbboing form=y cols=80 text="some text"]
 
 == Upgrade Notice ==
 

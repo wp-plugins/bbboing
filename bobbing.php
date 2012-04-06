@@ -2,6 +2,7 @@
 /**
 Plugin Name: bobbing
 Plugin URI: http://www.oik-plugins.com/oik-plugins/bobbing
+Depends: oik, bbboing
 Description: a sample plugin that's dependent upon oik and bbboing
 Version: 1.0
 Author: bobbingwide
