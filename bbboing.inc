@@ -2,9 +2,7 @@
 
 /**
  * Implementation of the bbboing shortcode 
- * This will be similar to the oik_trace_reset button
- */
- 
+*/
 function bbboing_sc( $atts=NULL ) {
   $form = bw_array_get( $atts, "form", 'N' );
   $both = bw_array_get( $atts, "both", 'N' );
@@ -15,12 +13,15 @@ function bbboing_sc( $atts=NULL ) {
     $result = _bbboing_form( $text, $atts );
   else
     $result = _bbboing_static( $text, $both );
-      
   return( $result );
 }
 
 /**
- * Display the original text and the bbboing'ed text
+ * Display the original text and the bbboing'ed text if both=TRUE, otherwise just the bbboing'ed text 
+ * 
+ * @param string $text - the text to bbboing
+ * @param bool $both - when true display the Original and bbboing'ed text, when false just the bbboing'ed text.
+ * @return string the result of the shortcode
  */
 function _bbboing_static( $text=NULL, $both=false ) {
   if ( $both ) {
@@ -33,27 +34,31 @@ function _bbboing_static( $text=NULL, $both=false ) {
 }
 
 
-
-function seed()
-{
-  $bnobbig = "According to a researcher at Cambridge University it doesn't matter in which order the letters in a word are ,";
+/** 
+ * This is the text that is used if the text= parameter is not specified
+ * @return string $bnobbig - the 'correct' original text to be obfuscated
+*/ 
+function seed() {
+  $bnobbig = "According to a researcher at Cambridge University it doesn't matter in what order the letters in a word are ,";
   $bnobbig.= " the only important thing is that the first and last letter be at the right place .";
   $bnobbig.= " The rest can be a total mess and you can still read it without problem ."; 
   $bnobbig.= " This is because the human mind does not read every letter by itself but the word as a whole .";
-
   return( $bnobbig );
 }
 
+
+/** 
+ * Note that in this 'original' version "rscheearch" is not an anagram of "researcher" and it breaks the rules
+ * that the first and last letters should be in the right place. It does at least have the right number of letters.
+*/ 
 function hoax_version()
 {
-  $bnobbig = "According to a researcher at Cambridge University it doesn't matter in which order the letters in a word are";
-  
+  $bnobbig = "According to a researcher at Cambridge University it doesn't matter in what order the letters in a word are";
   
   $bnobbig = "Aoccdrnig to a rscheearch at Cmabrigde Uinervtisy, it deosn't mttaer in waht oredr the ltteers in a wrod are ,";
   $bnobbig.= " the olny iprmoetnt tihng is taht the frist and lsat ltteer be at the rghit pclae .";
   $bnobbig.= " The rset can be a toatl mses and you can sitll raed it wouthit porbelm . ";
   $bnobbig.= " Tihs is bcuseae the huamn mnid deos not raed ervey lteter by istlef but the wrod as a wlohe. ";
-
   return( $bnobbig );
 }   
 
@@ -79,8 +84,7 @@ function _bbboing_form( $text=NULL, $atts=NULL ) {
   return( bw_ret());
 }
 
-function bbboing( $text )
-{
+function bbboing( $text ) {
    $bbtext = '';
    $words = explode( ' ', $text );
    foreach ( $words as $word )
@@ -91,8 +95,7 @@ function bbboing( $text )
    return( $bbtext );
 }
 
-function bboing( $word )
-{
+function bboing( $word ) {
    
   if ( ctype_alpha( $word ) )
   {
@@ -125,8 +128,7 @@ function bboing( $word )
 }
 
 
-function boing( $word )
-{
+function boing( $word ) {
   // echo $word . "\n";
   $count = strlen( $word );
   switch ( $count )
@@ -149,14 +151,12 @@ function boing( $word )
     break;
   }    
   return( $wrod );
-
 }
 
 
 /** 
  * Help for bbboing
 */
-
 function bbboing__help( ) {
  return( "Obfuscate some text but leave it readable, apparently" );
  gobang();
@@ -180,12 +180,10 @@ function bbboing__syntax( ) {
  *  [bbboing text="and this is where it shows the before and after" both='Y']
  * 
  */
-
 function bbboing__example( ) {
-  oik_require( "bbboing.inc", "bbboing" );
   e ( _bbboing_static( seed() ) );
   h4( "The manual version" );
-  p( "This is the original obfuscated text. It has been manually adjusted to make it readable" );
+  p( "This is the original obfuscated text. It has been manually adjusted to make it readable." );
   p( hoax_version() );
 }                 
 

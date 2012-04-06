@@ -50,7 +50,7 @@ Please use bbboing for your own amusement.
 
 Note: bbboing is dependent upon the oik plugin. You can activate it but it will not work unless oik is also activated.
 Download oik from 
-[oik download](http://wordpress.org/extend/plugins/oik/0
+[oik download](http://wordpress.org/extend/plugins/oik/)
 
 == Frequently Asked Questions ==
 = Where does bbboing come from? =
@@ -85,7 +85,7 @@ This is a sample plugin that is dependent upon oik and bbboing.
 == Upgrade Notice ==
 
 == Changelog ==
-= 0.1 =
+= 1.0 =
 * initial version. Works with oik version 1.11 
 
 
