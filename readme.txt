@@ -2,7 +2,7 @@
 Contributors: bobbingwide
 Donate link: http://www.oik-plugins.com/oik/oik-donate/
 Tags: shortcode, obfuscate 
-Requires: 3.0.4
+Requires at least: 3.0.4
 Tested up to: 3.3.1
 Stable tag: trunk
 
