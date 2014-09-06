@@ -1,9 +1,9 @@
 === bbboing ===
-Contributors: bobbingwide
+Contributors: bobbingwide, vsgloik 
 Donate link: http://www.oik-plugins.com/oik/oik-donate/
 Tags: shortcode, obfuscate 
 Requires at least: 3.5
-Tested up to: 3.9
+Tested up to: 4.0
 Stable tag: 1.6
 
 obfuscate text but leave it readable, apparently
@@ -86,8 +86,11 @@ It used to be delivered as part of bbboing, but is now delivered separately.
 1. Example of [bbboing form=y cols=80 text="some text"]
 
 == Upgrade Notice ==
+= 1.7 = 
+Now dependent upon oik v2.2 or higher. Tested with WordPress 4.0
+
 = 1.6 = 
-Now dependent upon oik v2.1-beta
+Now dependent upon oik v2.1 or higher. Tested with WordPress 3.9
 
 = 1.5 = 
 Required for smart-bbboing 
@@ -100,6 +103,9 @@ Requires oik version 1.12 or higher
 
 
 == Changelog ==
+= 1.7 = 
+* Changed: Responds to "oik_add_shortcodes" 
+
 = 1.6 = 
 * Changed: Added readme.md file for GitHub version. Built from readme.txt
 
