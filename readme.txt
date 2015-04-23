@@ -3,7 +3,7 @@ Contributors: bobbingwide, vsgloik
 Donate link: http://www.oik-plugins.com/oik/oik-donate/
 Tags: shortcode, obfuscate 
 Requires at least: 3.9
-Tested up to: 4.0
+Tested up to: 4.2
 Stable tag: 1.7
 
 obfuscate text but leave it readable, apparently
